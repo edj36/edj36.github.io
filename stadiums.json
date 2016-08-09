@@ -1,0 +1,42 @@
+[
+	{
+		"label": "NBT Bank Stadium",
+		"team" : "Syracuse Chiefs", 
+		"coordinates": [-76.165421, 43.078592]
+	},
+	{
+		"label": "Fenway Park",
+		"team" : "Boston Red Sox", 
+		"coordinates": [-71.097196, 42.346906]
+	},
+	{
+		"label": "Citi Field",
+		"team" : "New York Mets", 
+		"coordinates": [-73.845553, 40.757071]
+	},
+	{
+		"label": "Progressive Field",
+		"team" : "Cleveland Indians", 
+		"coordinates": [-81.685068, 41.496187]
+	},
+	{
+		"label": "Nationals Park",
+		"team": "Washington Nationals",
+		"coordinates":[-77.006832, 38.873019]
+	},
+	{
+		"label": "Greenjackets Park",
+		"team": "Augusta Greenjackets",
+		"coordinates":[-82.000441, 33.495281]
+	},
+	{
+		"label": "Petco Park",
+		"team": "San Diego Padres",
+		"coordinates":[-117.156762, 32.707681]
+	},
+	{
+		"label": "Dodger Stadium",
+		"team": "LA Dodgers",
+		"coordinates":[-118.239679, 34.073798]
+	}
+]
