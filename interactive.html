@@ -30,10 +30,10 @@
       <a href="/interactive.html" style="color: #95a5a6;"> Interactive Resume</a>
       &#8729;
       <a href="https://github.com/edj36" style="color: #95a5a6;">Projects</a>
-      &#8729; 
+      &#8729;
       <a href="/contact.html" style="color: #95a5a6;">Contact</a>
     </div>
-    <div class="date">Updated July 9, 2016</div>
+    <div class="date">Updated August 28, 2016</div>
   </div>
 </header>
 
@@ -68,7 +68,7 @@
 		<p class="list-items">c</p>
 		<p class="list-items">swift</p>
 		<p class="list-items">javascript</p>
-		<p class="list-items">verilog</p> 
+		<p class="list-items">verilog</p>
 	</div>
 	<div class="col">
 		<h2>Tools</h2>
@@ -85,7 +85,7 @@
 	<div id="detail"></div>
 	<div id="legend"></div>
 	<div>
-		<p>My interactive resume was inspired by <a href="http://ritchiesking.com/">Ritchie</a>, 
+		<p>My interactive resume was inspired by <a href="http://ritchiesking.com/">Ritchie</a>,
 	an awesome writer/data viz specialist over at <a href="http://fivethirtyeight.com/">538</a>.</p>
 	</div>
 </div>
@@ -117,7 +117,7 @@ var desGroup = d3.select("#detail").append("svg")
 	.attr("width",detailWidth)
 	.attr("height",detailHeight)
 	.attr("opacity",1);
-  
+
 var desDiv = desGroup.append("foreignObject")
 	.attr("x",0)
 	.attr("y",0)
@@ -135,7 +135,7 @@ var bumper = 12;
 var y = d3.scale.ordinal()
 	.domain(["a","b", "c", "d", "e","f","g", "h", "i", "j", "k"])
 	.range([0,
-		15, 
+		15,
 		30,
 		45,
 		60,
@@ -184,7 +184,7 @@ d3.csv("timeline.csv", function (error, data){
 
 	x.domain([
 		d3.min(data, function (d) { return d.beg; }),
-		d3.max(data, function (d) { return d.end; })	
+		d3.max(data, function (d) { return d.end; })
 	]);
 
 	svg.selectAll(".axis")
@@ -217,7 +217,7 @@ d3.csv("timeline.csv", function (error, data){
 		.text("fall 14")
 		.attr("x", x(parseDate("23-Aug-14")))
 		.attr("y", y("engineering") - 3);
-	
+
 	svg.append("text")
 		.attr("class","axisLabels")
 		.text("spring 15")
@@ -235,7 +235,7 @@ d3.csv("timeline.csv", function (error, data){
 		.text("pool")
 		.attr("x", x(parseDate("31-May-15")))
 		.attr("y", y("j") -3);
-	
+
 	svg.append("text")
 		.attr("class","axisLabels")
 		.text("fall 15")
@@ -247,13 +247,13 @@ d3.csv("timeline.csv", function (error, data){
 		.text("belle apps")
 		.attr("x", x(parseDate("23-Dec-15")) + 6)
 		.attr("y", y("i") - 3);
-		
+
 	svg.append("text")
 		.attr("class","axisLabels")
 		.text("spring 16")
 		.attr("x", x(parseDate("25-Jan-16")))
 		.attr("y", y("engineering") - 3);
-	
+
 	svg.append("text")
 		.attr("class","axisLabels")
 		.text("src")
@@ -275,7 +275,7 @@ d3.csv("timeline.csv", function (error, data){
 	    .attr("width", function(d) { return x(d.end)-x(d.beg); })
 	    .attr("y", function(d) { return y(d.cat); })
 	    .attr("height", 7 )
-	    .attr("fill", function(d, i) { 
+	    .attr("fill", function(d, i) {
 	    	if (i==selected) {
 	    		return "#000000";
 	    	}
@@ -293,7 +293,7 @@ d3.csv("timeline.csv", function (error, data){
 		.data(data)
 	  	.enter().append("div")
 	  	.html(function(d) { return d.des; })
-	  	.attr("class", function(d, i) { 
+	  	.attr("class", function(d, i) {
 	  		if (i == selected) {
 	  			return "shown";
 	  		}
@@ -320,7 +320,7 @@ d3.csv("timeline.csv", function (error, data){
 
 		des.transition()
 			.delay(200)
-			.attr("class",function(d, i) { 
+			.attr("class",function(d, i) {
 				if (i==selected) {
 					return "shown";
 				}
@@ -349,7 +349,7 @@ var svg2 = d3.select("#legend").append("svg")
 var legendXScale = d3.scale.ordinal()
 	.domain(["CS","ECE", "intro engineering", "liberal studies", "math","science","work"])
 	.range([5,
-		(legWidth/7)+5, 
+		(legWidth/7)+5,
 		((2*legWidth)/7)+5,
 		((3*legWidth)/7)+5,
 		((4*legWidth)/7)+5,
