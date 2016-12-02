@@ -7,6 +7,7 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="normalize.css">
 <link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -44,29 +45,73 @@
 </head>
 
 <body>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<header>
-    <div class="column">
-        <div class="navigation">
-            <a href="/" style="color: #95a5a6;">Home</a>
-            &#8729;
-            <a href="/interactive.html" style="color: #95a5a6;"> Interactive Resume</a>
-            &#8729;
-            <a href="https://github.com/edj36" style="color: #95a5a6;">Projects</a>
-            &#8729;
-            <a href="/contact.html" style="color: #95a5a6;">Contact</a>
-        </div>
-        <div class="date">Updated August 28, 2016</div>
-    </div>
-</header>
-
-<div>
-	<h2> MLB Playoff's 2016 Most Improved </h2>
-  <p>
-    Compare player's performance during the regular season against their
-    performance in the postseason. Who improved the most? Why?
-  </p>
+<!--<div class="nav">
+<ul>
+  <li class="nav_left">Updated November 12, 2016</li>
+  <li><a class="nav_right" href="/" style="color: #95a5a6;">Home</a></li>
+  <li><a class="nav_right" href="/interactive.html" style="color: #95a5a6;"> Interactive Resume</a></li>
+  <li><a class="nav_right" href="https://github.com/edj36" style="color: #95a5a6;">Projects</a></li>
+  <li><a class="nav_right" href="/contact.html" style="color: #95a5a6;">Contact</a></li>
+</ul>
 </div>
+
+<div class="content">
+
+</div>-->
+
+
+<title>OCaml</title>
+
+<meta charset="utf-8">
+<xmp theme="journal" style="display:none;">
+  # OCaml Client/Server
+
+  Recently in a project for school, my team and I decided to build a server to
+  complement the game we built. The [course][10x] is about functional programming and is taught in OCaml,
+  thus we needed to use Ocaml to implement the client and server we wanted for our game.
+  I certainly struggled at first finding useful examples or documentation for my needs, so here I am going to
+  try and make my own.
+
+  ## Setup
+  * * *
+
+  First, install Ocaml, [here][install]
+  is how I did it. Now that that is up and running, create a new project and create a
+  Makefile as follows:
+  ```
+  client:
+	ocamlbuild -pkg cohttp.lwt client_example.native && ./client_example.native
+
+  server:
+	ocamlbuild -pkg cohttp.lwt server_example.native && ./server_example.native
+
+  clean:
+	ocamlbuild -clean
+  ```
+
+  But wait! Whats `cohttp` and `lwt`? Those are the libaries we are going to
+  install for networking. Get them from `opam` like this:
+  ```
+  $ opam install cohttp lwt
+  ```
+  Specifically, `cohttp` is a popular OCaml HTTP library, and `lwt` (Light Weight
+  Threading) is exactly that, a light-weight thread library for Ocaml.
+
+  ## Client
+  * * *
+  More to come
+  ## Server
+  * * *
+  More to come
+
+  [install]: http://www.cs.cornell.edu/courses/cs3110/2016fa/install.html
+  [10x]: http://www.cs.cornell.edu/courses/cs3110/2016fa/index.php
+
+  </xmp>
+
+  <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
 </body>
 
