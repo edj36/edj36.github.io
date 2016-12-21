@@ -1,9 +1,9 @@
 header {
 	color: #999;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 1.5em 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5em 0;
 	position: fixed;
 }
 body {
@@ -12,8 +12,6 @@ body {
 	font-weight:100;
 	width:800px;
 }
-
-/*svg { border: solid black 1px; } */
 
 /* TAG FORMATTING */
 /*+++++++++++++++++++++++++++++++++++++*/
@@ -65,7 +63,7 @@ h5 {
 }
 p{
 	margin-top:0px;
-	font-size: 13px;
+	font-size: 14px;
 }
 #detail p{
 	margin-bottom:10px;
@@ -112,6 +110,7 @@ ul {
 	margin: 0;
 	float: left;
 	width: 100%;
+	font-size:14px;
 }
 .col {
 	float:left;
@@ -167,18 +166,3 @@ ul {
 	position: fixed;
 }
 
-/* For the US Map */
-.land {
-	fill: silver;
-}
-
-.county-boundary {
-  fill: none;
-  stroke: #fff;
-  stroke-width: .5px;
-}
-
-.state-boundary {
-  fill: none;
-  stroke: #fff;
-}
