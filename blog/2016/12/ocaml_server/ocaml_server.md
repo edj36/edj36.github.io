@@ -7,7 +7,7 @@ date: December 16, 2016
 ## OCaml Client/Server
 
 Recently in a project for school, my team and I decided to build a server to
-complement a game we had been working on . The [course](http://www.cs.cornell.edu/courses/cs3110/2016fa/index.php) is about functional programming and
+complement a game we had been working on. The [course](http://www.cs.cornell.edu/courses/cs3110/2016fa/index.php) is about functional programming and
 is taught in OCaml, thus we needed to use Ocaml to implement the client and server we wanted for our game.
 I certainly struggled at first finding useful examples or documentation for my needs, so here I am going to
 try and make my own. (These examples are built off of what I found in the

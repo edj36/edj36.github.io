@@ -72,7 +72,7 @@ p{
 .placeLabel {
 	margin-top:20px;
 	font-size:10px;
-}
+} 
 
 /* LAYOUT */
 /*+++++++++++++++++++++++++++++++++++++*/
@@ -107,10 +107,12 @@ ul {
 	background-color: white;
 }
 .content {
-	padding: 40px;
-	margin: 0;
+	/*padding: 40px;*/
+	margin-left: auto;
+	margin-right: auto;
+	/*margin: 0; */
 	float: left;
-	width: 100%;
+	width: 800px;
 	font-size:14px;
 }
 .col {
@@ -163,7 +165,7 @@ ul {
 	text-transform: uppercase;
 }
 .navigation {
-  float: right;
+    float: right;
 	position: fixed;
 }
 
