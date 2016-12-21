@@ -107,10 +107,8 @@ ul {
 	background-color: white;
 }
 .content {
-	/*padding: 40px;*/
-	margin-left: auto;
-	margin-right: auto;
-	/*margin: 0; */
+	padding: 40px;
+	margin: 0; 
 	float: left;
 	width: 800px;
 	font-size:14px;
