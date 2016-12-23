@@ -5,6 +5,7 @@ date: December 16, 2016
 ---  
 
 ## OCaml Client/Server
+* * *
 
 Recently in a project for school, my team and I decided to build a server to
 complement a game we had been working on. The [course](http://www.cs.cornell.edu/courses/cs3110/2016fa/index.php) is about functional programming and
