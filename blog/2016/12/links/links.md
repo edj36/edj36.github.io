@@ -12,6 +12,7 @@ date: December 20, 2016
 
 ## Articles
 ***
+* Designing systems, levels of [abstraction](http://worrydream.com/LadderOfAbstraction/)
 * Good guide to follow for written [content](http://programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown)
 * 2016 Year in Review, a must [read](https://www.peakprosperity.com/blog/104753/2016-year-review)
 

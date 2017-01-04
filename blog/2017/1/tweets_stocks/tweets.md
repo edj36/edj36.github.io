@@ -1,7 +1,7 @@
 ---
 title: Tweets and Stocks
 author: Eric Johnson
-date: December 20, 2016
+date: January 2016
 ---
 
 # Background
