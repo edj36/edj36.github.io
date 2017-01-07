@@ -1,3 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Eric Johnson" />
+  <meta name="date" content="2016-12-16" />
+  <title>Ocaml Server</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #303030; color: #cccccc; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #cccccc; background-color: #303030; }
+code > span.kw { color: #f0dfaf; } /* Keyword */
+code > span.dt { color: #dfdfbf; } /* DataType */
+code > span.dv { color: #dcdccc; } /* DecVal */
+code > span.bn { color: #dca3a3; } /* BaseN */
+code > span.fl { color: #c0bed1; } /* Float */
+code > span.ch { color: #dca3a3; } /* Char */
+code > span.st { color: #cc9393; } /* String */
+code > span.co { color: #7f9f7f; } /* Comment */
+code > span.ot { color: #efef8f; } /* Other */
+code > span.al { color: #ffcfaf; } /* Alert */
+code > span.fu { color: #efef8f; } /* Function */
+code > span.er { color: #c3bf9f; } /* Error */
+code > span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
+code > span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
+code > span.sc { color: #dca3a3; } /* SpecialChar */
+code > span.vs { color: #cc9393; } /* VerbatimString */
+code > span.ss { color: #cc9393; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #f0dfaf; } /* ControlFlow */
+code > span.op { color: #f0efd0; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #7f9f7f; } /* Documentation */
+code > span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
+code > span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
+code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+  </style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Ocaml Server</h1>
+<h2 class="author">Eric Johnson</h2>
+<h3 class="date">December 16, 2016</h3>
+</div>
 <h2 id="ocaml-clientserver">OCaml Client/Server</h2>
 <hr />
 <p>Recently in a project for school, my team and I decided to build a server to complement a game we had been working on. The <a href="http://www.cs.cornell.edu/courses/cs3110/2016fa/index.php">course</a> is about functional programming and is taught in OCaml, thus we needed to use Ocaml to implement the client and server we wanted for our game. I certainly struggled at first finding useful examples or documentation for my needs, so here I am going to try and make my own. (These examples are built off of what I found in the documentation for <code>cohttp</code>).</p>
@@ -12,20 +67,40 @@
 <p>For my purposes, I needed my client to be able to send <code>GET</code> and <code>POST</code> requests. This is a bit tricky at first, but usually pretty simple once you have a general form for your requests.</p>
 <p>You can dig through the <a href="http://github.com/mirage/ocaml-cohttp/">cohttp</a> repository to find their implementation of different requests, and to learn what you need to supply to send the requests. The repo also has a few useful examples, which I built upon for my purposes.</p>
 <p>First we need to open the libraries we are using:</p>
-<div class="sourceCode"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span class="kw">open</span> Lwt
+<div class="sourceCode"><table class="sourceCode ocaml numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+</pre></td><td class="sourceCode"><pre><code class="sourceCode ocaml"><span class="kw">open</span> Lwt
 <span class="kw">open</span> Cohttp
-<span class="kw">open</span> Cohttp_lwt_unix</code></pre></div>
+<span class="kw">open</span> Cohttp_lwt_unix</code></pre></td></tr></table></div>
 <p>The <code>GET</code> request:</p>
-<div class="sourceCode"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span class="kw">let</span> get_request =
+<div class="sourceCode"><table class="sourceCode ocaml numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="sourceCode"><pre><code class="sourceCode ocaml"><span class="kw">let</span> get_request =
   <span class="kw">let</span> u = Uri.of_string <span class="st">&quot;host-name&quot;</span> <span class="kw">in</span>
   Client.get u &gt;&gt;= <span class="kw">fun</span> (resp, body) -&gt;
     <span class="kw">let</span> code = resp |&gt; Response.status |&gt; Code.code_of_status <span class="kw">in</span>
     <span class="dt">Printf</span>.printf <span class="st">&quot;Response code: %d</span><span class="ch">\n</span><span class="st">&quot;</span> code;
     body |&gt; Cohttp_lwt_body.to_string &gt;|= <span class="kw">fun</span> body -&gt;
       <span class="dt">Printf</span>.printf <span class="st">&quot;Body of length: %d</span><span class="ch">\n</span><span class="st">&quot;</span> (<span class="dt">String</span>.length body);
-      body</code></pre></div>
+      body</code></pre></td></tr></table></div>
 <p>and the <code>POST</code> request:</p>
-<div class="sourceCode"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span class="kw">let</span> post_request str =
+<div class="sourceCode"><table class="sourceCode ocaml numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="sourceCode"><pre><code class="sourceCode ocaml"><span class="kw">let</span> post_request str =
   <span class="kw">let</span> b = Cohttp_lwt_body.of_string str <span class="kw">in</span>
   <span class="kw">let</span> u = Uri.of_string <span class="st">&quot;host-name&quot;</span> <span class="kw">in</span>
   Client.post ~body: b u &gt;&gt;= <span class="kw">fun</span> (resp, body) -&gt;
@@ -33,17 +108,46 @@
     <span class="dt">Printf</span>.printf <span class="st">&quot;Response code: %d</span><span class="ch">\n</span><span class="st">&quot;</span> code;
     body |&gt; Cohttp_lwt_body.to_string &gt;|= <span class="kw">fun</span> body -&gt;
       <span class="dt">Printf</span>.printf <span class="st">&quot;Body of length: %d</span><span class="ch">\n</span><span class="st">&quot;</span> (<span class="dt">String</span>.length body);
-      body</code></pre></div>
+      body</code></pre></td></tr></table></div>
 <p>Now to send either request:</p>
-<div class="sourceCode"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span class="co">(* sends GET request *)</span>
+<div class="sourceCode"><table class="sourceCode ocaml numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+</pre></td><td class="sourceCode"><pre><code class="sourceCode ocaml"><span class="co">(* sends GET request *)</span>
 Lwt.run get_request
 <span class="co">(* sends POST request with given [str] as body *)</span>
-Lwt.run (post_request str)</code></pre></div>
+Lwt.run (post_request str)</code></pre></td></tr></table></div>
 <p>For a while, I was lost as to why my request code seemed to compile fine, but nothing was ever sent. Calling <code>Lwt.run</code> is what actually triggers the functions execution, as it is asynchronous and needs to be scheduled.</p>
 <h2 id="server">Server</h2>
 <hr />
 <p>Now for some backend stuff. It is pretty simple to get a server up and running, and I will show you the basics of that here. Above, in the client example, I was a bit vague and just gave some implementations of functions to send requests. Here, for the server, the code should run fine without any tweaks, however, I would still be sure to modify it to suit your needs.</p>
-<div class="sourceCode"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span class="kw">open</span> Lwt
+<div class="sourceCode"><table class="sourceCode ocaml numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="sourceCode"><pre><code class="sourceCode ocaml"><span class="kw">open</span> Lwt
 <span class="kw">open</span> Cohttp
 <span class="kw">open</span> Cohttp_lwt_unix
 
@@ -67,18 +171,28 @@ Lwt.run (post_request str)</code></pre></div>
 <span class="kw">in</span>
 Server.create ~mode:(`TCP (`Port <span class="dv">8080</span>)) (Server.make ~callback ())
 
-<span class="kw">let</span> () = <span class="dt">ignore</span> (Lwt_main.run server)</code></pre></div>
+<span class="kw">let</span> () = <span class="dt">ignore</span> (Lwt_main.run server)</code></pre></td></tr></table></div>
 <p>This code will create and run a server on <code>localhost:8080</code>, and the server can be &quot;killed&quot; with <code>CTRL C</code>. As you can see, its just a simple echo server, but it serves as a good starting point to building something more complex and exciting.</p>
 <h2 id="usage">Usage</h2>
 <hr />
 <p>Once you have client and server implemented, its useful to develop a simple way to run them. I made a Makefile so that I would be able to run simple commands like <code>make server</code> in my terminal to compile and run the code. Makefile is as follows:</p>
-<pre><code>client:
+<div class="sourceCode"><table class="sourceCode numberLines"><tr class="sourceCode"><td class="lineNumbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="sourceCode"><pre><code class="sourceCode">client:
 ocamlbuild -pkg cohttp.lwt client_example.native &amp;&amp; ./client_example.native
 
 server:
 ocamlbuild -pkg cohttp.lwt server_example.native &amp;&amp; ./server_example.native
 
 clean:
-ocamlbuild -clean</code></pre>
+ocamlbuild -clean</code></pre></td></tr></table></div>
 <p>If you plan on using a Makefile, be sure to change <code>client_example</code> and <code>server_example</code> to whatever you named your client and server files. Also, it is important to remember that the code snippets above aren't going to do much (if anything at all) if just copied and pasted into a <code>.ml</code> file and left to run. I will leave it up to you to build code around them for your client and server to actually do something useful :).</p>
 <p>If anything above is wrong or unclear, or even if you just really like my work, let me know on <a href="http://twitter.com/EJ96">twitter</a>!!</p>
+</body>
+</html>

@@ -23,7 +23,7 @@ is how I did it.
 Next, we need to install a couple of libraries, specifically `cohttp` and `lwt`.
 Those are the libaries we are going to use for networking (`cohttp`) and for
 threading (`lwt`). Get them from `opam` like this:
-```
+``` 
 $ opam install cohttp lwt
 ```
 `cohttp` is a popular OCaml HTTP library, and `lwt` (Light Weight
@@ -40,14 +40,14 @@ and to learn what you need to supply to send the requests. The repo also has a f
 examples, which I built upon for my purposes.
 
 First we need to open the libraries we are using:
-``` ocaml
+``` {.ocaml .numberLines}
 open Lwt
 open Cohttp
 open Cohttp_lwt_unix
 ```
 
 The `GET` request:
-``` ocaml
+``` {.ocaml .numberLines}
 let get_request =
   let u = Uri.of_string "host-name" in
   Client.get u >>= fun (resp, body) ->
@@ -59,7 +59,7 @@ let get_request =
 ```
 
 and the `POST` request:
-``` ocaml
+``` {.ocaml .numberLines}
 let post_request str =
   let b = Cohttp_lwt_body.of_string str in
   let u = Uri.of_string "host-name" in
@@ -71,7 +71,7 @@ let post_request str =
       body
 ```
 Now to send either request:
-``` ocaml
+``` {.ocaml .numberLines}
 (* sends GET request *)
 Lwt.run get_request
 (* sends POST request with given [str] as body *)
@@ -89,7 +89,7 @@ I was a bit vague and just gave some implementations of functions to send reques
 Here, for the server, the code should run fine without any tweaks, however,
 I would still be sure to modify it to suit your needs.
 
-``` ocaml
+``` {.ocaml .numberLines}
 open Lwt
 open Cohttp
 open Cohttp_lwt_unix
@@ -129,7 +129,7 @@ Once you have client and server implemented, its useful to develop a simple
 way to run them. I made a Makefile so that I would be able to run
 simple commands like `make server` in my terminal to compile and run the code.
 Makefile is as follows:
-```
+``` {.numberLines}
 client:
 ocamlbuild -pkg cohttp.lwt client_example.native && ./client_example.native
 
