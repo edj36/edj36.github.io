@@ -12,12 +12,16 @@ date: December 20, 2016
 
 ## Articles
 ***
+* Everyone should [read](http://www.collaborativefund.com/blog/how-to-read/)
 * Designing systems, levels of [abstraction](http://worrydream.com/LadderOfAbstraction/)
 * Good guide to follow for written [content](http://programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown)
 * 2016 Year in Review, a must [read](https://www.peakprosperity.com/blog/104753/2016-year-review)
 
 ## Books 
 ***
-Some good books
 * Outliers, Gladwell
+* When Genius Failed, Lowenstein
 
+## Websites
+***
+* I enjoy reading Paul Graham's [essays](http://paulgraham.com/articles.html)
