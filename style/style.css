@@ -52,7 +52,7 @@ a:hover {
 	font-family: Helvetica;
 	font-weight:200;
 	font-size: 12pt;
-	width: 60%;
+	max-width: 650px;
 }
 
 
