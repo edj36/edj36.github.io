@@ -25,3 +25,4 @@ date: December 20, 2016
 ## Websites
 ***
 * I enjoy reading Paul Graham's [essays](http://paulgraham.com/articles.html)
+* [Techmeme] (https://www.techmeme.com/)
