@@ -13,11 +13,11 @@ Seth Klarmin (Cornell 79, Harvard 82) is the founder and leader of the Baupost G
 ***
 - long term investments based on underlying business fundamentals
 - historial ebb and flow of investor sentiment between greed and fear
-- There is nothing esoteric about value investing. It is simply the process of determining the value underlying a security and then buying it at a considerable discount from that value. It is really that simple.
 
-# Chapter 1: Where Most Investors Stumble
+> There is nothing esoteric about value investing. It is simply the process of determining the value underlying a security and then buying it at a considerable discount from that value. It is really that simple.
+
+# I: Where Most Investors Stumble
+## Chapter 1: Speculators and Unsuccessful Investors
 ***
-
-
-
-
+- investors believe that over the long run security prices tend to reflect fundamental developments involving the underlying business
+- page 20 
