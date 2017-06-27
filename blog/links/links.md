@@ -31,4 +31,4 @@ date: December 20, 2016
 * [links to cheap beta pdf dropboxes](https://twitter.com/cheapbeta/timelines/741291563431628803)
 * [education of a programmer](https://hackernoon.com/education-of-a-programmer-aaecf2d35312)
 * [learning by doing](https://dewanemutunga.com/learning-by-doing/)
-
+* [Bryon Wien lessons](https://www.blackstone.com/media/blogs/blackstone's-byron-wien-discusses-lessons-learned-in-his-first-80-years)
