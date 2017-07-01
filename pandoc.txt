@@ -6,7 +6,9 @@ pandoc in.md -o out.html --template template.html --css template.css --toc --toc
 
 pandoc in.md -o out.html -f markdown -t html5 --standalone --template gitHub.html5 --toc --toc-depth 2 --smart --normalize
 
-pandoc links.md -o links.html -f markdown -t html5 --standalone --template gitHub.html5 --smart --normalize
+pandoc value-shorting.md -o value-shorting.html -f markdown -t html5 --standalone --template gitHub.html5 --toc --toc-depth 2 --smart --normalize
+
+pandoc index.md -o index.html -f markdown -t html5 --standalone --template gitHub.html5 --smart --normalize
 
 For google analytics:
 <script>
