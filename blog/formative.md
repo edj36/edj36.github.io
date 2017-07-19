@@ -8,11 +8,17 @@ My self-help book.
 
 I have been thinking about what makes us who we are, what propels us to where we are, and how people end up in their spots in life.
 
-> Formative is a word that describes something that made you who you are[^1].
+> Formative is a word that describes something that made you who you are.[^1]
 
-People talk about their formative years and formative events in their life. Things that define them. Moments that truly altered their trajectory on the path of life. Talk like this leads me to believe that the *big* things matter, like getting a job, into a school, etc. This thinking is scary, and the root of a lot of anxiety for me and I would imagine a lot of others too. When you feel like the things that really matter are rare, important opportunities that are hard to get and easy to lose, you begin to fear failure and let it control you. It's easy to become obsessive about the future and the big events that others have convinced you are pivotal points in life. If you mess them up you are nothing, and will never amount to anything.
+People talk about their formative years and formative events in their life. Things that define them. Moments that truly altered their trajectory on the path of life. Byron Wien of Blackstone says
 
-This thinking also can drown out other areas that one may otherwise focus on too. Small things matter less when the big things are everything. Daily tasks or decisions get less attention, because we are all too busy trying to be ready for the next chance we get for a big break. I have skipped an entire day of classes just to try and get a job at a career fair. I lose hours of sleep because I am too worried about a test or upcoming examination. When I only think long term, my short term performance decreases significantly. 
+> 8. When meeting someone new, try to find out what formative experience occurred in their lives before they were seventeen.  It is my belief that some important event in everyone’s youth has an influence on everything that occurs afterwards.[^2]
+
+Talk like this leads me to believe that the *big* things matter, like getting a job or into a school, etc. Or even big things you can't control, like Byron Wein alludes to. This thinking is scary, causing anxiety for me and I would imagine a lot of others too. What happens when you don't get into the big school? What if you live a boring life before you are an adult? When you feel like the things that really matter are rare, important opportunities that are hard to get and easy to lose, you begin to fear failure and let it control you. It's easy to become obsessive about the future and the big events that others have convinced you are pivotal points in life. If you mess them up you are nothing, and will never amount to anything.
+
+This thinking also can drown out other areas that one may otherwise focus on too. Small things matter less when the big things are everything. Daily tasks or decisions get less attention, because we are all too busy trying to be ready for the next chance we get for a big break. I have skipped an entire day of classes just to try and get a job at a career fair. I lose hours of sleep because I am too worried about a test or upcoming examination. When I only think long term, my short term performance decreases significantly.
+
+In reponse to Byron's statement above, I think your "formative" event is the reaction to the elusive teenage shock in one's life. Although a good rule of thumb, it doesn't universally hold true that something happened to someone before they were 17 that changed who they are today. However, I believe it is true that everyone's small actions have an effect on them today.
 
 I am writing this to convince you and myself that this long term, event-driven, win big or lose it all philosophy is wrong. We are not defined by our jobs, our school, our test scores, our belongings, or other things that people stress about. I argue that our "small things" are the driving factors in our success, health, happiness, and trajectory in life. Getting the perfect job doesn't mean anything. Work and employment is temporary. Work ethic is not. Going to the best school only matters to people who still go to that school. What matters to everyone else is your attitude, and how you treat your peers, superiors, inferiors, etc. 
 
@@ -35,3 +41,4 @@ We are defined by our daily habits. Do the little things right and the big thing
 
 
 [^1]: [Formative definition](https://www.vocabulary.com/dictionary/formative)
+[^2]: [Byron Wien Lessons](https://www.blackstone.com/media/blogs/blackstone's-byron-wien-discusses-lessons-learned-in-his-first-80-years)
