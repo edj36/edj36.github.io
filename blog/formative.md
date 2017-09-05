@@ -37,7 +37,7 @@ People are worried about going to a good school. People want to go to Harvard. I
 
 I firmly believe that your day to day actions and habits are the formative factors in life. Big decisions, jobs, titles, and possessions do not matter. Doing the little things right does. Deciding to walk home instead of paying for a cab isn't a major decision. But making the choice to walk (save money and improve health) everyday will have its benefits in the long run. (I know, sometimes time is money and this example doesn't generalize, but still, you get the point). Think short term to achieve over the long term.
 
-We are defined by our daily habits. Do the little things right and the big things will take care of themselves. 
+We are defined by our daily habits. Do the little things right and the big things will take care of themselves.
 
 
 [^1]: [Formative definition](https://www.vocabulary.com/dictionary/formative)
