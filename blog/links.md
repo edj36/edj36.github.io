@@ -7,6 +7,7 @@ title: Links
 * Making pretty finite state machines with [Made By Evan](https://www.cefns.nau.edu/~edo/Classes/CS315_WWW/Tools/fsm.html)
 * Free, online, open-source Markdown editor and previewer, [Dillinger](http://dillinger.io/)
 * Visualizations for probability and statistics, [seeing theory](http://students.brown.edu/seeing-theory/index.html)
+* [Things programmers should know](https://github.com/mr-mig/every-programmer-should-know)
 
 ## Articles
 * Everyone should [read](http://www.collaborativefund.com/blog/how-to-read/)
@@ -26,3 +27,4 @@ title: Links
 * [education of a programmer](https://hackernoon.com/education-of-a-programmer-aaecf2d35312)
 * [learning by doing](https://dewanemutunga.com/learning-by-doing/)
 * [Bryon Wien lessons](https://www.blackstone.com/media/blogs/blackstone's-byron-wien-discusses-lessons-learned-in-his-first-80-years)
+* [10 signs a paper isn't worth your time](http://www.scottaaronson.com/blog/?p=304)
