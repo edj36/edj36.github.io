@@ -6,6 +6,7 @@ title: Posts
 
 I write here about things I am working on and about topics that interest me.
 
+- <a href="goal_driven_investing.html" target="_blank">Idea: Goal Driven Investing</a>
 - <a href="ml_final_review.pdf" target="_blank">Machine learning review sheet</a>
 - <a href="formative.html" target="_blank">Formative</a>
 - <a href="value-shorting.html" target="_blank">Value Shorting</a>
