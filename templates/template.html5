@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Posts</title>
+$for(author-meta)$
+  <meta name="author" content="$author-meta$">
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$">
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$">
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
   <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/local.css">
+$if(quotes)$
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+$endif$
+$if(highlighting-css)$
+  <style type="text/css">
+$highlighting-css$
+  </style>
+$endif$
+$for(css)$
+  <link rel="stylesheet" href="$css$">
+$endfor$
+$if(math)$
+  $math$
+$endif$
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+$for(header-includes)$
+  $header-includes$
+$endfor$
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -23,6 +47,9 @@
 </script>
 </head>
 <body>
+$for(include-before)$
+$include-before$
+$endfor$
 <header class="main-header">
     <a class="logo" href="/" title="Home">EJ</a>
     <nav class="main-header-nav">
@@ -39,19 +66,31 @@
 <article class="page">
 <section class="pageheader">
 <header class="header">
-<!--<h1 class="title">Posts</h1>-->
-<h1>Posts</h1>
+$if(title)$
+<!--<h1 class="title">$title$</h1>-->
+<h1>$title$</h1>
+$if(subtitle)$
+<!--<p class="subtitle">$subtitle$</p>-->
+<p>$subtitle$</p>
+$endif$
+$for(author)$
+<!--<p class="author">$author$</p>-->
+<p>$author$</p>
+$endfor$
+$if(date)$
+<p class="date">$date$</p>
+$endif$
 </header>
-<p>I write here about things I am working on and about topics that interest me.</p>
-<ul>
-<li><a href="goal_driven_investing.html" target="_blank">Idea: Goal Driven Investing</a></li>
-<li><a href="ml_final_review.pdf" target="_blank">Machine learning review sheet</a></li>
-<li><a href="formative.html" target="_blank">Formative</a></li>
-<li><a href="value-shorting.html" target="_blank">Value Shorting</a></li>
-<li><a href="year_in_review_16.html" target="_blank">2016 Year in Review</a></li>
-<li><a href="links.html" target="_blank">Links</a></li>
-<li><a href="ocaml_server.html" target="_blank">Ocaml Server</a></li>
-</ul>
+$endif$
+$if(toc)$
+<nav id="$idprefix$TOC">
+$toc$
+</nav>
+$endif$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
 </article>
 </body>
 </html>

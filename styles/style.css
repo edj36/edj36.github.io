@@ -1,0 +1,72 @@
+/* Note that instead of modifying this style sheet, you can instead edit
+ * local.css and use it to override or change settings in this one.
+ */
+
+/* html5 compat */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+	display: block;
+}
+
+.header {
+	margin: 0;
+	font-size: 140%;
+	font-weight: bold;
+	line-height: 1em;
+    display: block;
+}
+
+.pageheader .actions ul {
+	border-bottom: 1px solid #000;
+}
+
+.align-left {
+	float:left;
+}
+
+.align-right {
+	float:right;
+}
+
+img {
+	border-style: none;
+}
+
+pre {
+	overflow: auto;
+}
+
+/* mobile/small-screen-friendly layout */
+@media (max-width: 600px) {
+
+	/* if the mobile browser is new enough, use flex layout to shuffle
+	 * the sidebar to the end */
+	.page {
+		display: -webkit-box;
+		display: -webkit-flexbox;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-flex-direction: tb;
+		-webkit-flex-direction: column;
+		-webkit-flex-flow: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	#pageheader {
+		-webkit-box-ordinal-group: -1;
+		-webkit-order: -1;
+		-ms-box-ordinal-group: -1;
+		-ms-flex-order: -1;
+		order: -1;
+	}
+	.sidebar, #footer {
+		-webkit-box-ordinal-group: 1;
+		-webkit-order: 1;
+		-ms-box-ordinal-group: 1;
+		-ms-flex-order: 1;
+		order: 1;
+	}
+}

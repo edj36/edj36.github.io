@@ -2,8 +2,6 @@
 title: Posts
 --- 
 
-[Back](/)
-
 I write here about things I am working on and about topics that interest me.
 
 - <a href="goal_driven_investing.html" target="_blank">Idea: Goal Driven Investing</a>
