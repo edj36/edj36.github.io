@@ -4,10 +4,10 @@ title: Posts
 
 I write here about things I am working on and about topics that interest me.
 
-- <a href="goal_driven_investing.html" target="_blank">Idea: Goal Driven Investing</a>
-- <a href="ml_final_review.pdf" target="_blank">Machine learning review sheet</a>
-- <a href="formative.html" target="_blank">Formative</a>
-- <a href="value-shorting.html" target="_blank">Value Shorting</a>
-- <a href="year_in_review_16.html" target="_blank">2016 Year in Review</a>
-- <a href="links.html" target="_blank">Links</a>
-- <a href="ocaml_server.html" target="_blank">Ocaml Server</a>
+- [Idea: Goal Driven Investing](goal_driven_investing.html)
+- [Machine learning review sheet I wrote](ml_final_review.pdf)
+- [Formative](formative.html)
+- [Value Shorting](value-shorting.html)
+- [2016 Year in Review](year_in_review_16.html)
+- [Links](links.html)
+- [Ocaml Server](ocaml_server.html)
