@@ -48,9 +48,23 @@ code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Ann
 code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
   </style>
-<style type="text/css">body{margin:40px
-auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0
-10px}h1,h2,h3{line-height:1.2}</style>
+<style type="text/css">
+  body {
+    margin:40px auto;
+    max-width:650px;
+    line-height:1.4;
+    color:#444;
+    padding:0 10px;
+    font-family: sans-serif;
+  }
+  h1,h2,h3 {
+    line-height:1.2
+  }
+  pre { 
+    background: rgba(0, 0, 0, 0.05);
+    padding:5px;
+  }
+</style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -73,7 +87,7 @@ auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0
 <!--<p>Eric Johnson</p>-->
 Eric Johnson<br>
 December 16, 2016
-</p><hr>
+</p>
 </header>
 <p>Recently in a project for school, my team and I decided to build a server to complement a game we had been working on. The <a href="http://www.cs.cornell.edu/courses/cs3110/2016fa/index.php">course</a> is about functional programming and is taught in OCaml, thus we needed to use Ocaml to implement the client and server we wanted for our game. I certainly struggled at first finding useful examples or documentation for my needs, so here I am going to try and make my own. (These examples are built off of what I found in the documentation for <code>cohttp</code>).</p>
 <h2 id="setup">Setup</h2>
