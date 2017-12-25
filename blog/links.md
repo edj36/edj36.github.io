@@ -24,6 +24,7 @@ title: Links
 * [Python](https://hackernoon.com/yes-python-is-slow-and-i-dont-care-13763980b5a1) is slow, and good coding practice 
 * [education of a programmer](https://hackernoon.com/education-of-a-programmer-aaecf2d35312)
 * [learning by doing](https://dewanemutunga.com/learning-by-doing/)
+* [Dan Luu Notes on Google SRE book](https://danluu.com/google-sre-book/)
 
 ## Books 
 
