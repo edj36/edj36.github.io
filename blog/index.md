@@ -4,6 +4,7 @@ title: Posts
 
 I write here about things I am working on and about topics that interest me.
 
+- [2018 Resolution](resolution-2018.html)
 - [Why not Bitcoin?](why-not-bitcoin.html)
 - [Idea: Goal Driven Investing](goal_driven_investing.html)
 - [Formative](formative.html)
