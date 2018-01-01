@@ -14,7 +14,7 @@ I write here about things I am working on and about topics that interest me.
 
 # Notes
 
-Below are notes (some PDFs some HTML) from classes I have taken or books I have read. Notes from classes were not assigned work, I created them to review material learned in class in an organized way.
+Below are notes from classes I have taken or books I have read. Notes from classes were not assigned work, I created them to review material learned in class, usually in studying for exams.
 
-- [Chapter summaries](algo_chapter_summaries.pdf) from [CS 4820 - Introduction to Analysis of Algorithms](http://www.cs.cornell.edu/courses/cs4820/2017fa/)
-- [Machine learning review sheet](ml_final_review.pdf) for [ECE 4950 - Machine Learning and Pattern Recognition](https://people.ece.cornell.edu/acharya/teaching/ece4950s17/ece4950) at Cornell 
+- Chapter summaries for algorithms course ([CS 4820](http://www.cs.cornell.edu/courses/cs4820/2017fa/)): [pdf](algo_chapter_summaries.pdf)
+- Review sheet for machine learning course ([ECE 4950](https://people.ece.cornell.edu/acharya/teaching/ece4950s17/ece4950)): [pdf](ml_final_review.pdf)
