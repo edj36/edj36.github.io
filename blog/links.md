@@ -25,6 +25,7 @@ title: Links
 * [education of a programmer](https://hackernoon.com/education-of-a-programmer-aaecf2d35312)
 * [learning by doing](https://dewanemutunga.com/learning-by-doing/)
 * [Dan Luu Notes on Google SRE book](https://danluu.com/google-sre-book/)
+* [Looking Back – A (Lengthy) Reflection on Five Years in Academia](https://www.jeremyblum.com/2013/08/10/looking-back/)
 
 ## Books 
 
