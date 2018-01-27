@@ -30,6 +30,7 @@ title: Links
 
 * Outliers, Gladwell
 * When Genius Failed, Lowenstein
+* [Dan Wang's suggestions](https://danwang.co/books/)
 
 ## Websites
 
