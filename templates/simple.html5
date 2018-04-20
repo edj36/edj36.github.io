@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<!--==============================================================================
-	Inspired by http://bettermotherfuckingwebsite.com/ 
-	==============================================================================-->
 <html$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
 <head>
   <meta charset="utf-8">
@@ -31,7 +28,6 @@ $endif$
     margin:40px auto;
     max-width:650px;
     line-height:1.4;
-    color:#444;
     padding:0 10px;
     font-family: sans-serif;
   }
