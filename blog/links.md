@@ -67,6 +67,7 @@ title: Links
 * [Tom Silver](http://web.mit.edu/tslvr/www/index.html)
 * [Rachel by the Bay](https://rachelbythebay.com/w/)
 * [Zack Korman](https://zkorman.com)
+* [Donne Martin](http://donnemartin.com)
 
 ## Finance specific
 
