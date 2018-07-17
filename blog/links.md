@@ -11,6 +11,8 @@ title: Links
 * [NPR visuals team](https://github.com/nprapps)
 * [links to cheapbeta pdf dropboxes](https://twitter.com/cheapbeta/timelines/741291563431628803)
 * [Fork-n-Go](http://jlord.us/forkngo/)
+* [NYC Open Data](https://opendata.cityofnewyork.us)
+* [Body Weight Planner](https://www.niddk.nih.gov/bwp)
 
 ## Articles
 
@@ -29,6 +31,8 @@ title: Links
 * [Dan Luu Notes on Google SRE book](https://danluu.com/google-sre-book/)
 * [Looking Back – A (Lengthy) Reflection on Five Years in Academia](https://www.jeremyblum.com/2013/08/10/looking-back/)
 * [Dan Cross links page](http://pub.gajendra.net/links)
+* [The Rise of ''Worse is Better''](https://www.jwz.org/doc/worse-is-better.html)
+* [Puzzles from a Cornell professor](https://people.orie.cornell.edu/kriyer/puzzles.html)
 
 ## Books
 
@@ -38,7 +42,6 @@ title: Links
 
 ## Websites and blogs
 
-* [Aswath Damodaran - NYU Stern](http://people.stern.nyu.edu/adamodar/)
 * [Paul Graham's essays](http://paulgraham.com/articles.html)
 * [Techmeme](https://www.techmeme.com/)
 * [Marc Andreessen archive](https://pmarchive.com)
@@ -49,3 +52,30 @@ title: Links
 * [Dustin Ingram](https://dustingram.com)
 * [Of Dollars and Data](https://ofdollarsanddata.com)
 * [Perplex.city](https://perplex.city)
+* [Tom Preston-Warner](http://tom.preston-werner.com)
+* [Charlie You](http://charlieyou.me)
+* [Wall Street Playboys](http://wallstreetplayboys.com)
+* [Chris Mullins](https://crmullins.com)
+* [Feifan Zhou](https://feifan.blog)
+* [Modern Descartes](http://www.moderndescartes.com/essays/index.html)
+* [Doc Searls Weblog](http://blogs.harvard.edu/doc/)
+* [Leo Babauta](http://leobabauta.com/articles/)
+* [Mnmlist](http://mnmlist.com/archives/)
+* [Lacking Ambition](http://lackingambition.com)
+* [Zachary David](http://zacharydavid.com/blog/)
+* [Tom MacWright](https://macwright.org)
+* [Tom Silver](http://web.mit.edu/tslvr/www/index.html)
+* [Rachel by the Bay](https://rachelbythebay.com/w/)
+* [Zack Korman](https://zkorman.com)
+
+## Finance specific
+
+* [Aswath Damodaran - NYU Stern](http://people.stern.nyu.edu/adamodar/)
+* [Byron Wien and Joe Zidle at Blackstone](https://www.blackstone.com/insights)
+* [Cliff Asness Perspectives](https://www.aqr.com/Insights/Perspectives)
+* [Howard Marks Memos](https://www.oaktreecapital.com/insights/howard-marks-memos)
+* [Econompic Data](http://econompicdata.blogspot.com)
+* [Investment, Economics, and Finance Calculators & Visualizations Links](https://dqydj.com/finance-calculators-investment-calculators-and-visualizations/)
+* [SVRN Asset Management](http://svrn.co/all/)
+* [Mine Safety Disclosures](http://minesafetydisclosures.com)
+* [JL Collins](http://jlcollinsnh.com/stock-series/)
