@@ -13,6 +13,7 @@ title: Links
 * [Fork-n-Go](http://jlord.us/forkngo/)
 * [NYC Open Data](https://opendata.cityofnewyork.us)
 * [Body Weight Planner](https://www.niddk.nih.gov/bwp)
+* [Open guide to AWS](https://github.com/open-guides/og-aws)
 
 ## Articles
 
@@ -68,6 +69,8 @@ title: Links
 * [Rachel by the Bay](https://rachelbythebay.com/w/)
 * [Zack Korman](https://zkorman.com)
 * [Donne Martin](http://donnemartin.com)
+* [Werner Vogels' weblog](https://www.allthingsdistributed.com)
+* [Philip Guo](http://www.pgbovine.net)
 
 ## Finance specific
 
