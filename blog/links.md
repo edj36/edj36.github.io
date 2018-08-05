@@ -83,3 +83,4 @@ title: Links
 * [SVRN Asset Management](http://svrn.co/all/)
 * [Mine Safety Disclosures](http://minesafetydisclosures.com)
 * [JL Collins](http://jlcollinsnh.com/stock-series/)
+* [Cutting Through Noise](http://cuttingthroughnoise.com)
