@@ -1,8 +1,8 @@
----  
+---
 title: Formative
-author: Eric Johnson  
-date: 07-19-2017 
----  
+author: Eric Johnson
+date: 07-19-2017
+---
 
 My self-help book.
 
