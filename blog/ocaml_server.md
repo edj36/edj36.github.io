@@ -1,7 +1,7 @@
 ---  
 title: Ocaml Server 
 author: Eric Johnson  
-date: December 16, 2016 
+date: 12-16-2016 
 ---  
 
 Recently in a project for school, my team and I decided to build a server to
