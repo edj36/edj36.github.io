@@ -110,6 +110,7 @@ ready_files = sorted(ready_files, key=lambda x: datetime.datetime.strptime(x[2],
 # write to html
 for f,t,d in ready_files:
     index.write(d+': <a href=\'' + f[:-3] + '.html\'>' + t + '</a><br>')
+    index.write('\n')
 
 
 index.write('</p>')
