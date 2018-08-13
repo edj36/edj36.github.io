@@ -1,5 +1,7 @@
 ---  
 title: Links
+author: Eric Johnson
+date: 08-05-2018
 ---  
 
 ## Useful Resources
