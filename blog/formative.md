@@ -1,7 +1,7 @@
 ---  
 title: Formative
 author: Eric Johnson  
-date: July, 2017 
+date: 07-19-2017 
 ---  
 
 My self-help book.
