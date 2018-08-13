@@ -1,6 +1,6 @@
 # generates the index.html file for the blog directory
 index:
-	pandoc index.md -o index.html -f markdown -t html5 --standalone --template ../templates/simple.html5 --smart --normalize
+	python generate.py
 
 # generates a post with table of contents
 # in order for this to work <name> must be a .md file within this directory
