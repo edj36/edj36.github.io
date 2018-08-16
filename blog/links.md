@@ -3,7 +3,7 @@ title: Links
 author: Eric Johnson
 date: 2018-08-05
 ---  
-TODO: try changing all dates to YYYY-MM-DD
+
 ## Useful Resources
 
 * [Online Latex editor: Overleaf](http://www.overleaf.com/)
