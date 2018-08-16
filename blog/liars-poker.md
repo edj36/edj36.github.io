@@ -1,7 +1,7 @@
 ---
 title: Liar's Poker (by Michael Lewis) Review
 author: Eric Johnson
-date: 01-27-2018
+date: 2018-01-27
 ---
 
 This is the first installment (if you will) of my new year's resolution. This month I read the book *Liar's Poker* by Michael Lewis while I was traveling on break from school. I enjoyed the book and noticed some similiarities to what I have heard from friends and seen during recruiting at school in the finance world. What follows are some takeaways, memorable quotes, and thoughts I have after reading the book. If you are curious to learn more about what it was like to work in finance during the exciting period of the 1980s or are interested in general about the field, I highly recommend checking out this book. 

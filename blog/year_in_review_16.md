@@ -1,7 +1,7 @@
 ---
 title: 2016 Year in Review
 author: Eric Johnson
-date: 12-25-2016
+date: 2016-12-25
 ---
 
 # Background

@@ -105,11 +105,11 @@ for f in all_md_files:
         d = post['metadata'].get('date', '')
         ready_files.append((f,t,d))
 
-# sort based on date
-ready_files = sorted(ready_files, key=lambda x: datetime.datetime.strptime(x[2], '%m-%d-%Y'), reverse=True)
+# sort based on date (make sure dates in .md files are year-month-day)
+ready_files = sorted(ready_files, key=lambda x: datetime.datetime.strptime(x[2].strftime('%Y-%m-%d'), '%Y-%m-%d'), reverse=True)
 # write to html
 for f,t,d in ready_files:
-    index.write(d+': <a href=\'' + f[:-3] + '.html\'>' + t + '</a><br>')
+    index.write(d.strftime('%m-%d-%Y')+': <a href=\'' + f[:-3] + '.html\'>' + t + '</a><br>')
     index.write('\n')
 
 

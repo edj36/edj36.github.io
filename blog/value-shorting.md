@@ -1,7 +1,7 @@
 ---
 title: Value Shorting
 author: Eric Johnson
-date: 07-01-2017
+date: 2017-07-01
 ---
 
 I recently read [Has the Meteoric Rise of Passive Investing Generated the Greatest Bubble Ever](https://latest.13d.com/has-the-meteoric-rise-of-passive-investing-generated-the-greatest-bubble-ever-257200fe5caf) from 13D Research.
