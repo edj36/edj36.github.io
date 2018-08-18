@@ -1,5 +1,5 @@
 # need `pip install pyyaml` to run
-# copied from https://github.com/jonbeebe/frontmatter
+# copied frontmatter parsing from https://github.com/jonbeebe/frontmatter
 import yaml
 import os
 import datetime
