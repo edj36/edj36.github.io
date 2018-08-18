@@ -1,7 +1,7 @@
 ---
 title: Goal Driven Investing
 author: Eric Johnson
-date: 2017-10-04
+date: 10-04-2017
 ---
 
 A new idea for investment management. When most people invest, they do so with the goal of making as much money as possible. This is completely reasonable and logical but I feel it also leads to illogical behavior. When you see someone who bought Bitcoin 2 years ago, or who has owned a FANG since 2013, you see that they have made money and you experience the fear of missing out (FOMO). You feel an implusive need to own what your colleague owns so that you too can have a share of their earnings. Or perhaps you run a trading algorithm and are having success with its trades, so you want to expand its exposure and try to run it in a new market. I argue these actions and ideas are illogical and that they hold investors back, because although the goal to make a lot of money is clearly reflected in their execution, the techniques posed lead to more trouble than they are worth. 

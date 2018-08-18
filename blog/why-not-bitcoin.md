@@ -1,6 +1,6 @@
 ---
 title: Why not Bitcoin?
-date: 2017-12-23
+date: 12-23-2017
 author: Eric Johnson
 ---
 
