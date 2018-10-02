@@ -41,17 +41,9 @@ top = """<!DOCTYPE html>
 </p>
 </header>"""
 
-notes = """<h1 id="notes">Notes</h1>
-<p>Below are notes from classes I have taken. Notes from classes were not assigned work. I created them to review material learned in class, usually in studying for exams.</p>
-<ul>
-<li>Notes from Evolutionary Processes, Evolutionary Algorithms, Evolutionary Games (<a href="https://classes.cornell.edu/browse/roster/SP18/class/ECE/4271">ECE 4271</a>): <a href="ece4271-review.pdf">pdf</a></li>
-<li>Chapter summaries for algorithms course (<a href="http://www.cs.cornell.edu/courses/cs4820/2017fa/">CS 4820</a>): <a href="algo_chapter_summaries.pdf">pdf</a></li>
-<li>Review sheet for machine learning course (<a href="https://people.ece.cornell.edu/acharya/teaching/ece4950s17/ece4950">ECE 4950</a>): <a href="ml_final_review.pdf">pdf</a></li>
-</ul>"""
-
 bottom = """<p>
 <hr>
-<a href="/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/">Blog</a></p>
+<a href="/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/">Blog</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/notes/">Notes</a>
 </p>
 </body>
 </html>"""
@@ -114,7 +106,6 @@ for f,t,d in ready_files:
 
 
 index.write('</p>')
-index.write(notes)
 index.write(bottom)
 index.close()
 
