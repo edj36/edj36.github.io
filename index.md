@@ -7,7 +7,11 @@ Hi, my name is Eric Johnson. I recently graduated from Cornell, where I studied 
 ### Projects
 
 - [Blog](/blog/)
+- [Notes](/notes/)
 - Interactive [resume](https://edj36.github.io/interactive/)
+
+### Old Projects
+
 - Live dashboard of daily MLB [scores](https://edj36.github.io/mlb-dashboard/)
 
 ### Current Work
