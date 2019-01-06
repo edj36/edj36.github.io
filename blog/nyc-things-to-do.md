@@ -17,6 +17,10 @@ Things I have done or want to do in NYC. Posting them here so I remember them an
 - RH Rooftop
 - Carbone
 - Wolfnight Wraps 
+- Quality Meats
+- Brine Chicken
+- Empire Cake (in West Village)
+- Uncle Boon's and Uncle Boon's Sister
 
 ## Pizza
 
