@@ -1,14 +1,13 @@
 ---
 title: Things to do in NYC
 author: Eric Johnson
-date: 12-23-2018
+date: 01-20-2019
 ---
 
 Things I have done or want to do in NYC. Posting them here so I remember them and so others can check them out too, not paid to endorse anything.
 
 # Food
 
-- Arlo Rooftop
 - Space Market
 - Flip n Toss
 - Joe and Pats (East Village)
@@ -43,6 +42,10 @@ Things I have done or want to do in NYC. Posting them here so I remember them an
 
 - [Shibui](https://www.thegreenwichhotel.com/shibui-spa/)
 - [Russian Turkish Baths](http://www.russianturkishbaths.com/baths)
+
+# Drinks 
+
+- Arlo Rooftop
 
 # Free
 
