@@ -21,6 +21,9 @@ Things I have done or want to do in NYC. Posting them here so I remember them an
 - Brine Chicken
 - Empire Cake (in West Village)
 - Uncle Boon's and Uncle Boon's Sister
+- Madame Vo BBQ
+- John Brown Smokehouse (in LIC)
+- Don Angies
 
 ## Pizza
 
