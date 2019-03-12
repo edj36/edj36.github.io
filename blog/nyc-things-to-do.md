@@ -23,6 +23,8 @@ Things I have done or want to do in NYC. Posting them here so I remember them an
 - Madame Vo BBQ
 - John Brown Smokehouse (in LIC)
 - Don Angies
+- 4 Charles Prime Rib
+- Thursday Kitchen
 
 ## Pizza
 
@@ -52,3 +54,10 @@ Things I have done or want to do in NYC. Posting them here so I remember them an
 - Culture pass via NYPL card.
 - NYPL card 
 - Domino Park
+
+# Brooklyn
+
+- Brooklyn brewery
+- William Vale
+- Spritzen haus
+- all of these places are pretty close to each other in green point area, would be fun to do on a warm saturday afternoon
