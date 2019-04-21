@@ -1,39 +1,54 @@
-# requirements to run:
-#     pyyaml: `pip install pyyaml`
-#     pandoc: https://pandoc.org
-# copied frontmatter parsing from https://github.com/jonbeebe/frontmatter
-import yaml
-import os
+"""
+This script gets every markdown file in the current 
+directory (my blog directory), uses pandoc and my custom 
+template to convert them to html, and then creates 
+an index.html file for the blog, with posts listed 
+in reverse chronological order (most recent first).
+
+Requirements to run:
+
+- pyyaml: `pip install pyyaml`
+- tqdm: `pip install tqdm`
+- pandoc: https://pandoc.org
+
+Attribution:
+
+I copied code for YAML frontmatter parsing 
+from https://github.com/jonbeebe/frontmatter
+"""
 import datetime
 import glob
+import os
 import subprocess
-from tqdm import tqdm
 
-# preset parts of index.html
+from tqdm import tqdm
+import yaml
+
+# preset strings in index.html
 top = """<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Posts</title>
-  <style type="text/css">code{white-space: pre;}</style>
+<meta charset="utf-8">
+<meta name="generator" content="pandoc">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Posts</title>
+<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-  body {
+body {
     margin:40px auto;
     max-width:650px;
     line-height:1.5;
     padding:0 10px;
     font-family: sans-serif;
-  }
-  pre { 
+}
+pre { 
     background: rgba(0, 0, 0, 0.05);
     padding:5px;
-  }
+}
 </style>
-  <!--[if lt IE 9]>
+<!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+<![endif]-->
 </head>
 <body>
 <header>
@@ -116,7 +131,6 @@ def generate_index():
     for f,t,d in ready_files:
         index.write('{}: <a href=\'{}.html\'>{}</a><br>'.format(d,f[:-3],t))
         index.write('\n')
-
 
     index.write('</p>')
     index.write(bottom)
