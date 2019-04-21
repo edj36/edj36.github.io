@@ -1,5 +1,5 @@
 # generates the index.html file for the blog directory
-index:
+site:
 	python generate.py
 
 # generates a post with table of contents

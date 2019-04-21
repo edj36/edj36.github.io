@@ -1,8 +1,13 @@
-# need `pip install pyyaml` to run
+# requirements to run:
+#     pyyaml: `pip install pyyaml`
+#     pandoc: https://pandoc.org
 # copied frontmatter parsing from https://github.com/jonbeebe/frontmatter
 import yaml
 import os
 import datetime
+import glob
+import subprocess
+from tqdm import tqdm
 
 # preset parts of index.html
 top = """<!DOCTYPE html>
@@ -79,32 +84,50 @@ def __separate_yaml_content(lines=[]):
 
     return (parsedyaml, remaining)
 
-index = open('index.html','w')
-index.write(top)
-index.write('<p>')
+def generate_posts():
+    print('generating html posts from md')
+    md_files = glob.glob('*.md')
+    for md_file in tqdm(md_files):
+        html_file = md_file[:-3]
+        pandoc_string = 'pandoc {} -o {}.html -f markdown -t html5 --standalone --template ../templates/simple.html5 --smart --normalize'.format(md_file,html_file)
+        subprocess.run(pandoc_string, shell=True, check=True)
+    print('done generating html posts from md')
 
-# get list of (file, title, date) for only the files ready to publish
-all_md_files = [f for f in os.listdir('.') if os.path.isfile(f) and f.endswith('.md')]
-all_html_files = [f[:-5] for f in os.listdir('.') if os.path.isfile(f) and f.endswith('.html')] # names only
-ready_files = []
-for f in all_md_files:
-    if f[:-3] in all_html_files: # check if corresponding html generated (i.e. ready to publish)
-        post = parse(f)
-        t = post['metadata'].get('title','')
-        d = post['metadata'].get('date', '')
-        ready_files.append((f,t,d))
+def generate_index():
+    print('generating index page')
+    index = open('index.html','w')
+    index.write(top)
+    index.write('<p>')
 
-# sort based on date
-ready_files = sorted(ready_files, key=lambda x: datetime.datetime.strptime(x[2], '%m-%d-%Y'), reverse=True)
-# write to html
-for f,t,d in ready_files:
-    index.write('{}: <a href=\'{}.html\'>{}</a><br>'.format(d,f[:-3],t))
-    index.write('\n')
+    # get list of (file, title, date) for only the files ready to publish
+    all_md_files = [f for f in os.listdir('.') if os.path.isfile(f) and f.endswith('.md')]
+    all_html_files = [f[:-5] for f in os.listdir('.') if os.path.isfile(f) and f.endswith('.html')] # names only
+    ready_files = []
+    for f in all_md_files:
+        if f[:-3] in all_html_files: # check if corresponding html generated (i.e. ready to publish)
+            post = parse(f)
+            t = post['metadata'].get('title','')
+            d = post['metadata'].get('date', '')
+            ready_files.append((f,t,d))
+
+    # sort based on date
+    ready_files = sorted(ready_files, key=lambda x: datetime.datetime.strptime(x[2], '%m-%d-%Y'), reverse=True)
+    # write to html
+    for f,t,d in ready_files:
+        index.write('{}: <a href=\'{}.html\'>{}</a><br>'.format(d,f[:-3],t))
+        index.write('\n')
 
 
-index.write('</p>')
-index.write(bottom)
-index.close()
+    index.write('</p>')
+    index.write(bottom)
+    index.close()
+    print('done generating index page')
+
+if __name__ == "__main__":
+    generate_posts()
+    generate_index()
+
+
 
 
 
