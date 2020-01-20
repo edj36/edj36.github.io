@@ -32,4 +32,5 @@ Hi, my name is Eric Johnson. I recently graduated from Cornell, where I studied 
 - [Twitter](http://twitter.com/EJ96)
 - [LinkedIn](https://www.linkedin.com/in/eric-johnson-97ab3aa3)
 - [Github](https://github.com/edj36)
+- [Goodreads](https://www.goodreads.com/user/show/93742725-eric-johnson)
 - 315.720.7227
