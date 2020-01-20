@@ -1,16 +1,18 @@
 ---
 title: Ideas for a side business
 author: Eric Johnson
-date: 02-04-2019
+date: 01-20-2020
 ---
 
-Want a side business that is 
+Want a side business that is
+
 - as passive as possible
-- provides stream of income to me
+- provides stream of income
 - should be through an LLC to make safe
 - can do any with a group/partners or by yourself, but need initial capital to get it off the ground
 
 Ideas:
+
 - rental property (vacation, apartments, homes)
 - own a condo (in nyc building) and rent it
 - parking lot
@@ -32,6 +34,6 @@ Ideas:
 - niche skills you can consult on 
 - scrape web data (automated) and sell it to hedge funds 
 - sell data based on your side businesses
-- buy non-performing loans and get the people to pay them off
 - bet on sports, sell reliable bet predictions
 
+[More](https://sweatystartup.com/business-ideas-part-1-lawn-care-christmas-lights-mobile-locksmith/) [ideas](https://sweatystartup.com/businesses-i-love/)
