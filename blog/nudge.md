@@ -1,7 +1,7 @@
 ---
 title: Nudge Review
 author: Eric Johnson
-date: April 2018
+date: 04-01-2018
 ---
 
 My thoughts and ideas after reading Nudge by Thaler (link here)

@@ -7,8 +7,8 @@ in reverse chronological order (most recent first).
 
 Requirements to run:
 
-- pyyaml: `pip install pyyaml`
-- tqdm: `pip install tqdm`
+- pyyaml: `pip3 install pyyaml`
+- tqdm: `pip3 install tqdm`
 - pandoc: https://pandoc.org
 
 Attribution:
@@ -93,7 +93,7 @@ def __separate_yaml_content(lines=[]):
             marker_reached = True
         linenum += 1
 
-    parsedyaml = yaml.load(yaml_content) or {}
+    parsedyaml = yaml.load(yaml_content, Loader=yaml.FullLoader) or {}
     nextline = linenum + 1
     remaining = lines[nextline:]
 
@@ -104,7 +104,7 @@ def generate_posts():
     md_files = glob.glob('*.md')
     for md_file in tqdm(md_files):
         html_file = md_file[:-3]
-        pandoc_string = 'pandoc {} -o {}.html -f markdown -t html5 --standalone --template ../templates/simple.html5 --smart --normalize'.format(md_file,html_file)
+        pandoc_string = 'pandoc {} -o {}.html -f markdown -t html5 --standalone --template ../templates/simple.html5'.format(md_file,html_file)
         subprocess.run(pandoc_string, shell=True, check=True)
     print('done generating html posts from md')
 

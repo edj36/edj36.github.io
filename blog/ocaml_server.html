@@ -8,41 +8,69 @@
   <title>Ocaml Server</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
 <style type="text/css">
   body {
@@ -81,61 +109,61 @@ Eric Johnson<br>
 <p>For my purposes, I needed my client to be able to send <code>GET</code> and <code>POST</code> requests. This is a bit tricky at first, but usually pretty simple once you have a general form for your requests.</p>
 <p>You can dig through the <a href="http://github.com/mirage/ocaml-cohttp/">cohttp</a> repository to find their implementation of different requests, and to learn what you need to supply to send the requests. The repo also has a few useful examples, which I built upon for my purposes.</p>
 <p>First we need to open the libraries we are using:</p>
-<div class="sourceCode"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span class="kw">open</span> Lwt
-<span class="kw">open</span> Cohttp
-<span class="kw">open</span> Cohttp_lwt_unix</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">open</span> Lwt</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">open</span> Cohttp</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="kw">open</span> Cohttp_lwt_unix</span></code></pre></div>
 <p>The <code>GET</code> request:</p>
-<div class="sourceCode"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span class="kw">let</span> get_request =
-  <span class="kw">let</span> u = Uri.of_string <span class="st">&quot;host-name&quot;</span> <span class="kw">in</span>
-  Client.get u &gt;&gt;= <span class="kw">fun</span> (resp, body) -&gt;
-    <span class="kw">let</span> code = resp |&gt; Response.status |&gt; Code.code_of_status <span class="kw">in</span>
-    <span class="dt">Printf</span>.printf <span class="st">&quot;Response code: %d</span><span class="ch">\n</span><span class="st">&quot;</span> code;
-    body |&gt; Cohttp_lwt_body.to_string &gt;|= <span class="kw">fun</span> body -&gt;
-      <span class="dt">Printf</span>.printf <span class="st">&quot;Body of length: %d</span><span class="ch">\n</span><span class="st">&quot;</span> (<span class="dt">String</span>.length body);
-      body</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">let</span> get_request =</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="kw">let</span> u = Uri.of_string <span class="st">&quot;host-name&quot;</span> <span class="kw">in</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>  Client.get u &gt;&gt;= <span class="kw">fun</span> (resp, body) -&gt;</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    <span class="kw">let</span> code = resp |&gt; Response.status |&gt; Code.code_of_status <span class="kw">in</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="dt">Printf</span>.printf <span class="st">&quot;Response code: %d</span><span class="ch">\n</span><span class="st">&quot;</span> code;</span>
+<span id="cb3-6"><a href="#cb3-6"></a>    body |&gt; Cohttp_lwt_body.to_string &gt;|= <span class="kw">fun</span> body -&gt;</span>
+<span id="cb3-7"><a href="#cb3-7"></a>      <span class="dt">Printf</span>.printf <span class="st">&quot;Body of length: %d</span><span class="ch">\n</span><span class="st">&quot;</span> (<span class="dt">String</span>.length body);</span>
+<span id="cb3-8"><a href="#cb3-8"></a>      body</span></code></pre></div>
 <p>and the <code>POST</code> request:</p>
-<div class="sourceCode"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span class="kw">let</span> post_request str =
-  <span class="kw">let</span> b = Cohttp_lwt_body.of_string str <span class="kw">in</span>
-  <span class="kw">let</span> u = Uri.of_string <span class="st">&quot;host-name&quot;</span> <span class="kw">in</span>
-  Client.post ~body: b u &gt;&gt;= <span class="kw">fun</span> (resp, body) -&gt;
-    <span class="kw">let</span> code = resp |&gt; Response.status |&gt; Code.code_of_status <span class="kw">in</span>
-    <span class="dt">Printf</span>.printf <span class="st">&quot;Response code: %d</span><span class="ch">\n</span><span class="st">&quot;</span> code;
-    body |&gt; Cohttp_lwt_body.to_string &gt;|= <span class="kw">fun</span> body -&gt;
-      <span class="dt">Printf</span>.printf <span class="st">&quot;Body of length: %d</span><span class="ch">\n</span><span class="st">&quot;</span> (<span class="dt">String</span>.length body);
-      body</code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">let</span> post_request str =</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="kw">let</span> b = Cohttp_lwt_body.of_string str <span class="kw">in</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="kw">let</span> u = Uri.of_string <span class="st">&quot;host-name&quot;</span> <span class="kw">in</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>  Client.post ~body: b u &gt;&gt;= <span class="kw">fun</span> (resp, body) -&gt;</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="kw">let</span> code = resp |&gt; Response.status |&gt; Code.code_of_status <span class="kw">in</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="dt">Printf</span>.printf <span class="st">&quot;Response code: %d</span><span class="ch">\n</span><span class="st">&quot;</span> code;</span>
+<span id="cb4-7"><a href="#cb4-7"></a>    body |&gt; Cohttp_lwt_body.to_string &gt;|= <span class="kw">fun</span> body -&gt;</span>
+<span id="cb4-8"><a href="#cb4-8"></a>      <span class="dt">Printf</span>.printf <span class="st">&quot;Body of length: %d</span><span class="ch">\n</span><span class="st">&quot;</span> (<span class="dt">String</span>.length body);</span>
+<span id="cb4-9"><a href="#cb4-9"></a>      body</span></code></pre></div>
 <p>Now to send either request:</p>
-<div class="sourceCode"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span class="co">(* sends GET request *)</span>
-Lwt.run get_request
-<span class="co">(* sends POST request with given [str] as body *)</span>
-Lwt.run (post_request str)</code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">(* sends GET request *)</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>Lwt.run get_request</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co">(* sends POST request with given [str] as body *)</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>Lwt.run (post_request str)</span></code></pre></div>
 <p>For a while, I was lost as to why my request code seemed to compile fine, but nothing was ever sent. Calling <code>Lwt.run</code> is what actually triggers the functions execution, as it is asynchronous and needs to be scheduled.</p>
 <h2 id="server">Server</h2>
 <p>Now for some backend stuff. It is pretty simple to get a server up and running, and I will show you the basics of that here. Above, in the client example, I was a bit vague and just gave some implementations of functions to send requests. Here, for the server, the code should run fine without any tweaks, however, I would still be sure to modify it to suit your needs.</p>
-<div class="sourceCode"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span class="kw">open</span> Lwt
-<span class="kw">open</span> Cohttp
-<span class="kw">open</span> Cohttp_lwt_unix
-
-<span class="kw">let</span> server =
-<span class="kw">let</span> callback _conn req body =
-  <span class="kw">let</span> uri = req |&gt; Request.uri |&gt; Uri.to_string <span class="kw">in</span>
-  <span class="kw">let</span> meth = req |&gt; Request.meth |&gt; Code.string_of_method <span class="kw">in</span>
-  <span class="kw">match</span> req |&gt; Request.meth <span class="kw">with</span>
-  | `GET -&gt; body |&gt; Cohttp_lwt_body.to_string &gt;|= (<span class="kw">fun</span> body -&gt;
-      (<span class="dt">print_endline</span> <span class="st">&quot;GET REQUEST RECEIVED&quot;</span>);
-      body)
-    &gt;&gt;= (<span class="kw">fun</span> body -&gt; (Server.respond_string ~status:`OK ~body ()))
-  | `POST -&gt; body |&gt; Cohttp_lwt_body.to_string &gt;|= (<span class="kw">fun</span> body -&gt;
-      (<span class="dt">print_endline</span> <span class="st">&quot;POST REQUEST RECEIVED&quot;</span>);
-      body)
-    &gt;&gt;= (<span class="kw">fun</span> body -&gt; (Server.respond_string ~status:`OK ~body ()))
-  | _ -&gt; body |&gt; Cohttp_lwt_body.to_string &gt;|= (<span class="kw">fun</span> body -&gt;
-      (<span class="dt">print_endline</span> <span class="st">&quot;UNEXPECTED REQUEST RECEIVED&quot;</span>);
-      (<span class="st">&quot;ERROR&quot;</span>))
-    &gt;&gt;= (<span class="kw">fun</span> body -&gt; (Server.respond_string ~status:`OK ~body ()))
-<span class="kw">in</span>
-Server.create ~mode:(`TCP (`Port <span class="dv">8080</span>)) (Server.make ~callback ())
-
-<span class="kw">let</span> () = <span class="dt">ignore</span> (Lwt_main.run server)</code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">open</span> Lwt</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="kw">open</span> Cohttp</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="kw">open</span> Cohttp_lwt_unix</span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="kw">let</span> server =</span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="kw">let</span> callback _conn req body =</span>
+<span id="cb6-7"><a href="#cb6-7"></a>  <span class="kw">let</span> uri = req |&gt; Request.uri |&gt; Uri.to_string <span class="kw">in</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>  <span class="kw">let</span> meth = req |&gt; Request.meth |&gt; Code.string_of_method <span class="kw">in</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>  <span class="kw">match</span> req |&gt; Request.meth <span class="kw">with</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a>  | `GET -&gt; body |&gt; Cohttp_lwt_body.to_string &gt;|= (<span class="kw">fun</span> body -&gt;</span>
+<span id="cb6-11"><a href="#cb6-11"></a>      (<span class="dt">print_endline</span> <span class="st">&quot;GET REQUEST RECEIVED&quot;</span>);</span>
+<span id="cb6-12"><a href="#cb6-12"></a>      body)</span>
+<span id="cb6-13"><a href="#cb6-13"></a>    &gt;&gt;= (<span class="kw">fun</span> body -&gt; (Server.respond_string ~status:`OK ~body ()))</span>
+<span id="cb6-14"><a href="#cb6-14"></a>  | `POST -&gt; body |&gt; Cohttp_lwt_body.to_string &gt;|= (<span class="kw">fun</span> body -&gt;</span>
+<span id="cb6-15"><a href="#cb6-15"></a>      (<span class="dt">print_endline</span> <span class="st">&quot;POST REQUEST RECEIVED&quot;</span>);</span>
+<span id="cb6-16"><a href="#cb6-16"></a>      body)</span>
+<span id="cb6-17"><a href="#cb6-17"></a>    &gt;&gt;= (<span class="kw">fun</span> body -&gt; (Server.respond_string ~status:`OK ~body ()))</span>
+<span id="cb6-18"><a href="#cb6-18"></a>  | _ -&gt; body |&gt; Cohttp_lwt_body.to_string &gt;|= (<span class="kw">fun</span> body -&gt;</span>
+<span id="cb6-19"><a href="#cb6-19"></a>      (<span class="dt">print_endline</span> <span class="st">&quot;UNEXPECTED REQUEST RECEIVED&quot;</span>);</span>
+<span id="cb6-20"><a href="#cb6-20"></a>      (<span class="st">&quot;ERROR&quot;</span>))</span>
+<span id="cb6-21"><a href="#cb6-21"></a>    &gt;&gt;= (<span class="kw">fun</span> body -&gt; (Server.respond_string ~status:`OK ~body ()))</span>
+<span id="cb6-22"><a href="#cb6-22"></a><span class="kw">in</span></span>
+<span id="cb6-23"><a href="#cb6-23"></a>Server.create ~mode:(`TCP (`Port <span class="dv">8080</span>)) (Server.make ~callback ())</span>
+<span id="cb6-24"><a href="#cb6-24"></a></span>
+<span id="cb6-25"><a href="#cb6-25"></a><span class="kw">let</span> () = <span class="dt">ignore</span> (Lwt_main.run server)</span></code></pre></div>
 <p>This code will create and run a server on <code>localhost:8080</code>, and the server can be “killed” with <code>CTRL C</code>. As you can see, its just a simple echo server, but it serves as a good starting point to building something more complex and exciting.</p>
 <h2 id="usage">Usage</h2>
 <p>Once you have client and server implemented, its useful to develop a simple way to run them. I made a Makefile so that I would be able to run simple commands like <code>make server</code> in my terminal to compile and run the code. Makefile is as follows:</p>

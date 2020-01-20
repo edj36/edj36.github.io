@@ -1,3 +1,9 @@
+---
+title: Continuity
+author: Eric Johnson
+date: 08-01-2019
+---
+
 Random thought on continuity.
 
 Feeling I like is using a product (i.e. a razor or shaving cream) until its done and then going out and buying the exact same version of something and using that, like in a cycle. Not sure why but I really like it when this happens (Clark's shoes, etc.).
